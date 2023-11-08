@@ -1,0 +1,25 @@
+program twosComplement;
+#include("stdlib.hhf")
+
+static
+    pos_value:	int8;
+    neg_value:	int8;
+
+begin twosComplement;
+
+    stdout.put( "Enter an integer between 0 and 127: " );
+    stdin.get( pos_value );
+    stdout.put( nl, "Value in hex: $" );
+    stdout.puth8( pos_value );
+
+    mov( pos_value, al );
+    // not ( al );
+    // stdout.put( nl, "Invert all the bits: $", al, nl);
+    // add( 1, al );
+    neg( al );
+    // stdout.put( "Add one: $", al, nl );
+    mov( al, neg_value );
+    stdout.put( nl, "Result in decimal: ", neg_value, nl);
+
+end twosComplement;
+

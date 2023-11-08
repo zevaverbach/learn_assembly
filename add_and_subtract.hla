@@ -1,0 +1,26 @@
+program AddAndSub;
+
+#include("stdlib.hhf")
+
+static
+    eight_bit_integer: 		int8	:= 7;
+
+begin AddAndSub;
+
+    stdout.put
+    (
+	nl,
+	"Initialized values: eight_bit_integer=", 
+	eight_bit_integer,
+	nl
+    );
+
+    mov( 0, dh ); // `al` is an eight-bit register
+    sub( eight_bit_integer, dh ); // `al` minus `eight_bit_integer` 
+    mov( dh, eight_bit_integer ); // this should be -7
+
+    stdout.put(nl, "Now eight_bit_integer = ", eight_bit_integer, nl);
+    // add( 135, eight_bit_integer);
+    // stdout.put(nl, "Now eight_bit_integer = ", eight_bit_integer, nl);
+   
+end AddAndSub;

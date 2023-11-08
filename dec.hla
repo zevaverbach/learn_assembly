@@ -1,0 +1,12 @@
+program ConvertToDecimal;
+#include("stdlib.hhf")
+static
+    value: int32;
+
+begin ConvertToDecimal;
+
+    stdout.put("Input a hex value: ");
+    stdin.get(eax);
+    mov(eax, value);
+    stdout.put("The value $", eax, " converted to decimal is ", value, nl);
+end ConvertToDecimal;

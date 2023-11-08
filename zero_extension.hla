@@ -1,0 +1,14 @@
+program zero_extension;
+#include("stdlib.hhf")
+
+static
+    magic_num:       int8 := 42;
+    magic_num_16:    int16;
+
+begin zero_extension;
+    mov(magic_num, al);
+    mov(0, ah);
+    mov(ax, magic_num_16);
+    stdout.put("magic_num_16 = ", magic_num_16); // should be 42
+end zero_extension;
+            

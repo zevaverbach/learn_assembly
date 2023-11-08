@@ -1,0 +1,15 @@
+program Vars;
+#include( "stdlib.hhf" )
+
+static
+    MyNum:		int8 := 42;
+    NumNotInitialized:	int8;
+
+begin Vars;
+
+    stdout.put( "MyNum = ", MyNum, nl);
+    stdout.put( "Enter an integer value: " );
+    stdin.get(NumNotInitialized);
+    stdout.put( "You entered '", NumNotInitialized, "'", nl );
+
+end Vars;

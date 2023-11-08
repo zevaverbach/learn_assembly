@@ -1,0 +1,13 @@
+program LogicalOp;
+#include("stdlib.hhf")
+begin LogicalOp;
+    stdout.put( "Input left operand: "); // 5 -> 0000_0000_0000_0101
+    stdin.get( eax );
+    stdout.put( "Input right operand: ");
+    stdin.get( ebx ); // 15 -> 0000_0000_0000_1111
+
+    stdout.put( "$", eax, " xor $", ebx, " = $");
+    // mov (eax, ecx ); 
+    xor (eax, ebx );
+    stdout.put( ebx, nl); // 10
+end LogicalOp;
